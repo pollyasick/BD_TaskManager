@@ -28,10 +28,7 @@ const Auth = observer(() => {
             let data;
             if (isLogin) {
                 data = await login(email, password);
-            // } else {
-            //     if (password !== confirmPassword) {
-            //         throw new Error('Пароли не совпадают');
-            //     }
+            } else {
                 data = await registration(username, first_name, last_name, email, password, role);
             }
             user.setUser(data);

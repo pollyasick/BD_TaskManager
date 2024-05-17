@@ -21,6 +21,7 @@ const TaskManager = observer(() => {
 
     return (
         <Container>
+            {/* ВСТАВИТЬ ПРОВЕРКУ АДМИН ИЛИ НЕТ */}
             <Row className="mt-2">
                 <Col md={6}>
                     <h3>Проекты</h3>

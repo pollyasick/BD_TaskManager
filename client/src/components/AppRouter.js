@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom'
 import {authRoutes, publicRoutes} from "../routes";
-import {TASK_MANAGER_ROUTE} from "../utils/const_s";
+import {LOGIN_ROUTE} from "../utils/const_s";
 import {Context} from "../index";
 import {observer} from "mobx-react-lite";
 // import Auth from '../pages/Auth';
@@ -18,7 +18,7 @@ const AppRouter = observer(() => {
             {publicRoutes.map(({path, Component}) =>
                 <Route key={path} path={path} component={Component} exact/>
             )}
-            <Redirect to={TASK_MANAGER_ROUTE}/>
+        <Redirect to={LOGIN_ROUTE}/>
         </Switch>
     );
 });
